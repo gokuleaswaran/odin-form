@@ -1,20 +1,64 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
     <title>Signup Form</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="aside">
-        <div class="aside__logo">
-            <img src="" alt="">
-            <h1 class="logo-text">Odin</h1>
-        </div>
+      <div class="aside__logo">
+        <img src="" alt="" />
+        <h1 class="logo-text">Odin</h1>
+      </div>
+      <p class="aside__credits">
+        Photo by <a href="">XXX</a> on <a href="">Unsplash</a>
+      </p>
     </div>
-</body>
-</html>
 
-    </form>
-</body>
+    <div class="form-container">
+      <section class="cta">
+        <p class="cta__text">
+          This is not a real online service! You know you need something like
+          this in your life to help you realize your deepest dreams. Sign up now
+          to get started. <br />
+          You know you want to.
+        </p>
+      </section>
+      <form action="/" method="post">
+        <fieldset>
+          <p>Let's do this!</p>
+          <p class="form__input">
+            <label for="first-name"></label>
+            <input type="text" name="first-name" id="fname" />
+          </p>
+          <p class="form__input">
+            <label for="last-name"></label>
+            <input type="text" name="last-name" id="lname" />
+          </p>
+          <p class="form__input">
+            <label for="email"></label>
+            <input type="email" name="email" id="email" />
+          </p>
+          <p class="form__input">
+            <label for="telephone"></label>
+            <input type="tel" name="telephone" id="tel" />
+          </p>
+          <p class="form__input">
+            <label for="password"></label>
+            <input type="password" name="password" id="pass" />
+          </p>
+          <p class="form__input">
+            <label for="confirm-password"></label>
+            <input type="password" name="confirm-password" id="conf-pass" />
+          </p>
+        </fieldset>
+        <p class="button">
+          <button type="submit">Create Account</button>
+        </p>
+      </form>
+    </div>
+    <script src="./script.js"></script>
+  </body>
 </html>
