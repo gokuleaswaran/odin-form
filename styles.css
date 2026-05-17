@@ -174,7 +174,6 @@ h6 {
 }
 
 .aside__credits {
-  color: var(--color-background);
   font-size: var(--font-size-small);
   text-align: center;
   color: var(--color-text-link-light);
@@ -210,7 +209,7 @@ fieldset {
   padding: var(--spacing-large);
 }
 
-fieldset p:first-child {
+fieldset legend {
   font-size: clamp(var(--font-size-small), 1.2vw, var(--font-size-large));
   margin-bottom: var(--spacing-large);
 }
@@ -225,16 +224,15 @@ fieldset label {
   font-weight: 400;
   letter-spacing: 0.1rem;
   font-size: var(--font-size-small);
-  color: #2b2b2b;
+  color: var(--color-text-default);
 }
 
 fieldset input {
-  outline: none;
   border: 1.8px solid var(--color-input-border);
   border-radius: 5px;
   font-size: var(--font-size-small);
   padding: var(--spacing-small);
-  width: var(--sizing-small);
+  width: min(100%, var(--sizing-small));
   margin-top: var(--spacing-small);
 }
 
@@ -244,14 +242,15 @@ fieldset input:focus {
   box-shadow: 0 0 0 3px rgba(0, 0, 255, 0.1);
 }
 
-fieldset .password:user-invalid {
-  outline: none;
+input:user-invalid,
+fieldset input:user-invalid:focus {
   border: 1.8px solid var(--color-input-password-border);
   box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.1);
 }
 
 fieldset section {
   display: flex;
+  flex-wrap: wrap;
   gap: var(--spacing-xx-large);
 }
 
@@ -274,5 +273,11 @@ fieldset section {
 }
 
 .form__login a {
-  color: var(--color-accent)
+  color: var(--color-accent);
+}
+
+@media (max-width: 900px) {
+  body {
+    flex-direction: column;
+  }
 }
