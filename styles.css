@@ -177,6 +177,7 @@ h6 {
   color: var(--color-background);
   font-size: var(--font-size-small);
   text-align: center;
+  color: var(--color-text-link-light);
 }
 
 .aside__credits a {
@@ -212,4 +213,66 @@ fieldset {
 fieldset p:first-child {
   font-size: clamp(var(--font-size-small), 1.2vw, var(--font-size-large));
   margin-bottom: var(--spacing-large);
+}
+
+fieldset label,
+fieldset input {
+  display: block;
+}
+
+fieldset label {
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  font-size: var(--font-size-small);
+  color: #2b2b2b;
+}
+
+fieldset input {
+  outline: none;
+  border: 1.8px solid var(--color-input-border);
+  border-radius: 5px;
+  font-size: var(--font-size-small);
+  padding: var(--spacing-small);
+  width: var(--sizing-small);
+  margin-top: var(--spacing-small);
+}
+
+fieldset input:focus {
+  outline: none;
+  border: 1.8px solid var(--color-input-border-focus);
+  box-shadow: 0 0 0 3px rgba(0, 0, 255, 0.1);
+}
+
+fieldset .password:user-invalid {
+  outline: none;
+  border: 1.8px solid var(--color-input-password-border);
+  box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.1);
+}
+
+fieldset section {
+  display: flex;
+  gap: var(--spacing-xx-large);
+}
+
+.button button {
+  border: transparent;
+  background-color: var(--color-accent);
+  color: var(--color-button-text);
+  padding: var(--spacing-small) var(--spacing-x-large);
+  border-radius: 5px;
+  margin: var(--spacing-x-large) 0;
+}
+
+.button,
+.form__login {
+  padding-left: var(--spacing-large);
+}
+
+.form__login {
+  font-size: var(--font-size);
+}
+
+.form__login a {
+  color: var(--color-accent)
 }
