@@ -7,9 +7,9 @@
     <title>Signup Form</title>
   </head>
   <body>
-    <aside class="aside">
+    <div class="aside">
       <div class="aside__logo">
-        <img src="./assets/odin-lined.png" alt="Odin logo" />
+        <img src="./assets/odin-lined.png" />
         <h1 class="logo-text">Odin</h1>
       </div>
       <p class="aside__credits">
@@ -17,9 +17,9 @@
         <a href="https://unsplash.com/@haliewestphoto">Halie West</a> on
         <a href="https://unsplash.com/">Unsplash</a>
       </p>
-    </aside>
+    </div>
 
-    <main class="form-container">
+    <div class="form-container">
       <section class="cta">
         <p class="cta__text">
           This is not a real online service! You know you need something like
@@ -31,14 +31,14 @@
       </section>
       <form action="/" method="post">
         <fieldset>
-          <legend>Let's do this!</legend>
+          <p>Let's do this!</p>
           <section class="name">
             <p class="form__input">
               <label for="fname">First Name</label>
               <input
                 type="text"
                 name="first-name"
-                id="first-name"
+                id="fname"
                 required
                 minlength="2"
                 placeholder="John"
@@ -49,7 +49,7 @@
               <input
                 type="text"
                 name="lname"
-                id="last-name"
+                id="lname"
                 required
                 minlength="2"
                 placeholder="Doe"
@@ -71,13 +71,7 @@
             </p>
             <p class="form__input">
               <label for="tel">Phone Number</label>
-              <input
-                type="tel"
-                name="telephone"
-                id="telephone"
-                pattern="[0-9]{10}"
-                title="Enter exactly 10 digits"
-              />
+              <input type="tel" name="telephone" id="tel" pattern="[0-9]{10}" />
             </p>
           </section>
 
@@ -87,10 +81,9 @@
               <input
                 type="password"
                 name="password"
-                id="password"
+                id="pass"
                 required
-                pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[#?!@$%^&*-]).{8,}"
-                title="Min 8 chars, with uppercase, lowercase, number, and special character"
+                pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$"
               />
             </p>
             <p class="form__input">
@@ -98,7 +91,7 @@
               <input
                 type="password"
                 name="confirm-password"
-                id="confirm-password"
+                id="conf-pass"
                 required
               />
             </p>
@@ -111,7 +104,7 @@
           Already have an account? <a href="">Log In</a>
         </p>
       </form>
-    </main>
+    </div>
     <script src="./script.js"></script>
   </body>
 </html>
